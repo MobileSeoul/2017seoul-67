@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context="io.github.tlaabs.enjoyseoul.SearchActivity"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    >
+
+    <!--actionbar-->
+    <LinearLayout
+        android:id="@+id/actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@color/colorMainDark"
+        >
+        
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_arrow_back_white_36dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            />
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="행사 찾기"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginRight="46dp"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            />
+    </LinearLayout>
+
+    <!--scrollView-->
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+        <!--bigBox-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+            <!--title_search_box-->
+            <LinearLayout
+                android:id="@+id/title_search_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
+
+                <!--sub_choice_box-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="명칭"
+                        android:gravity="left"
+                        android:textSize="18dp"
+                        android:textColor="#000000"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        />
+
+                </RelativeLayout>
+                <!--searchInput-->
+                <EditText
+                    android:id="@+id/search_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="문화행사를 입력하세요"
+                    android:background="@drawable/dark_gray_rectangle"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="8dp"
+                    android:textSize="16dp"
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    />
+
+
+            </LinearLayout>
+            <!--divider-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d3d3d3"
+                ></LinearLayout>
+            <!--genre_search_box-->
+            <LinearLayout
+                android:id="@+id/genre_search_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
+
+                <!--sub_choice_box-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="장르"
+                        android:gravity="left"
+                        android:textSize="18dp"
+                        android:textColor="#000000"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <Button
+                        android:id="@+id/genre_pick_btn"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="선택"
+                        android:padding="8dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/button_event"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        ></Button>
+                </RelativeLayout>
+                <!--list_item_box-->
+               <com.google.android.flexbox.FlexboxLayout
+                   android:id="@+id/genre_list_box"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   app:flexWrap="wrap"
+                   >
+
+
+               </com.google.android.flexbox.FlexboxLayout>
+
+
+            </LinearLayout>
+            <!--divider-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d3d3d3"
+                ></LinearLayout>
+            <!--period_search_box-->
+            <LinearLayout
+                android:id="@+id/period_search_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
+
+                <!--sub_choice_box-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="기간"
+                        android:gravity="left"
+                        android:textSize="18dp"
+                        android:textColor="#000000"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        />
+
+                </RelativeLayout>
+
+                <!--date_pick_box-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <!--start_date-->
+                    <TextView
+                        android:id="@+id/start_date"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:background="@drawable/button_event"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" ~ "
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"
+                        android:inputType="none"
+                        />
+                    <!--end_date-->
+                    <TextView
+                        android:id="@+id/end_date"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:background="@drawable/button_event"
+                        android:padding="10dp"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!--divider-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d3d3d3"
+                ></LinearLayout>
+            <!--region_search_box-->
+            <LinearLayout
+                android:id="@+id/region_search_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
+
+                <!--sub_choice_box-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="지역"
+                        android:gravity="left"
+                        android:textSize="18dp"
+                        android:textColor="#000000"
+                        android:fontFamily="sans-serif"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        />
+
+                    <Button
+                        android:id="@+id/region_pick_btn"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="선택"
+                        android:padding="8dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/button_event"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        ></Button>
+                </RelativeLayout>
+                <!--list_item_box-->
+                <com.google.android.flexbox.FlexboxLayout
+                    android:id="@+id/region_list_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:flexWrap="wrap"
+
+                    >
+
+                </com.google.android.flexbox.FlexboxLayout>
+
+
+            </LinearLayout>
+            <!--divider-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d3d3d3"
+                ></LinearLayout>
+            <!--fee_search_box-->
+            <LinearLayout
+                android:id="@+id/fee_search_box"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                >
+
+                <!--sub_choice_box-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="요금"
+                        android:gravity="left"
+                        android:textSize="18dp"
+                        android:textColor="#000000"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <Button
+                        android:id="@+id/fee_all_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="요금무관"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/gray_rectangle"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        />
+                    <Button
+                        android:id="@+id/fee_nfree_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="유료"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/gray_rectangle"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        />
+                    <Button
+                        android:id="@+id/fee_free_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="무료"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        android:layout_margin="4dp"
+                        android:background="@drawable/gray_rectangle"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!--divider-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#d3d3d3"
+                ></LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        >
+        <Button
+            android:id="@+id/reset_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="초기화"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:layout_marginRight="3dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/no_stroke_rectangle"
+            />
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="검색"
+            android:textStyle="bold"
+            android:textSize="14dp"
+            android:layout_marginLeft="3dp"
+            android:textColor="#ffffff"
+            android:background="@drawable/no_stroke_rectangle"
+            />
+    </LinearLayout>
+
+</LinearLayout>

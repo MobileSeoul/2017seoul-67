@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="genre_colors">
+        <item>#f77f79</item>
+        <item>#a29ac9</item>
+        <item>#a3d271</item>
+        <item>#786851</item>
+        <item>#7cc6d7</item>
+        <item>#5ccb94</item>
+        <item>#551a3a</item>
+        <item>#e6b94d</item>
+        <item>#5191d3</item>
+        <item>#3952a5</item>
+        <item>#dc4c42</item>
+        <item>#a58a77</item>
+
+        <!--more-->
+        <item>#db1781</item>
+        <item>#99212a</item>
+        <item>#46413d</item>
+    </string-array>
+
+
+</resources>

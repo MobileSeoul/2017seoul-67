@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">엔조이 서울</string>
+
+    <!--db-->
+    <string name="database_name">enjoy.db</string>
+    <string name="table_events">events</string>
+    <!--d-->
+    <string name="table_favorite">favorite</string>
+    <string name="event_data_src">http://115.84.165.224/bigfile/iot/sheet/csv/download.do?infId=OA-135</string>
+    <string name="event_data">events_data.csv</string>
+    <string name="server">http://13.124.245.99/index.php</string>
+
+
+    <!--kakao link-->
+    <string name="kakao_app_key">-</string>
+    <string name="kakao_rest_api_key">-</string>
+    <string name="kakao_scheme">-</string>
+    <string name="kakaolink_host">-</string>
+
+    <!--kakao link template-->
+    <string name="kakao_template">-</string>
+    <!--google map-->
+    <string name="gmap_api_key">-</string>
+
+
+    <!--font-->
+    <string name="font_path">fonts/dancing_bold.ttf</string>
+</resources>

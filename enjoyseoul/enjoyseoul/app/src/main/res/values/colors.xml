@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3f51b5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#f77f79</color>
+
+    <color name="prettyPink">#f77f79</color>
+
+    <color name="colorMainPink">#ed1c56</color>
+    <color name="colorMainDark">#394657</color>
+
+    <color name="colorMainOrange">#f57035</color>
+    <color name="colorGray">#d3d3d3</color>
+    <color name="colorDarkGray">#b4b8bb</color>
+
+    <color name="feeFree">#008ece</color>
+    <color name="feeNFree">#ae1831</color>
+
+    <color name="detailText">#647fac</color>
+
+    <color name="isfavor">#f77f79</color>
+    <color name="colorStar">#F9C134</color>
+
+</resources>
